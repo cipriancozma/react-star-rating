@@ -1,0 +1,7 @@
+.star-rating-container {
+  display: flex;
+}
+
+.star.active {
+  color: yellow;
+}
