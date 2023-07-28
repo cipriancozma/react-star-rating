@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./star-rating.css";
 
-function StarRating({ numberOfStars = 5 }) {
+function StarRating({ numberOfStars = 5, onChange }) {
   const [currentRating, setCurrentRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
+
+  useEffect(() => {
+    onChange(currentRating);
+  }, [currentRating, onChange]);
 
   return (
     <div className="star-rating-container">
