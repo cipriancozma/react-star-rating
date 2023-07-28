@@ -25,7 +25,7 @@ function StarRating({ numberOfStars = 5, onChange }) {
             onMouseEnter={() => setHoverRating(ratingValue)}
             onMouseLeave={() => setHoverRating(0)}
           >
-            {ratingValue}
+            &#9733;
           </p>
         );
       })}
